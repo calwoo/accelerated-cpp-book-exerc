@@ -1,11 +1,7 @@
 #include <algorithm>
+#include <stdexcept>
 #include <vector>
-
-
-double grade(double midterm, double final, double homework)
-{
-    return 0.2 * midterm + 0.4 * final + 0.4 * homework;
-}
+using namespace std;
 
 double median(vector<double> vec)
 {
