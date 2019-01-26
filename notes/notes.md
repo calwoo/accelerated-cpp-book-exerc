@@ -8,4 +8,6 @@ As a reminder, the **const** keyword on a variable, eg `const int x = 3` ensures
 
 ### chapter 3
 
-C-style static arrays are limited. The C++ standard library (STL) has as a container the dynamic array (called here a **vector**).
+C-style static arrays are limited. The C++ standard library (STL) has as a *container* the dynamic array (called here a **vector**). To specify a vector, we use type `vector<underlying datatype>`, eg. `vector<int>` or `vector<double>`. The vector type is defined using **template classes*, which are a form of polymorphism.
+
+To add an element to a vector, we use the `.push_back(item)` method. This is the analogous method to `.append(item)` in Python lists.
