@@ -25,3 +25,7 @@ Containers in the STL have associated **iterators** that permit efficient extrac
 In fact, every STL container has two associated iterators: the `const_iterator` and `iterator`. The first gives us read-only access, while the second is more general and allows us to change values stored in the container.
 
 If our iterator is point to a *struct*, then instead of writing `(*iter).name`, we can use syntactic sugar to write `iter->name`.
+
+### chapter 7
+
+C++'s STL supports **associative containers**, which automatically arrange their elements into a sequence that depends on the values of the elements themselves, rather than the sequence in which we inserted them. The most common data structure of this sort is the **associative array**, and C++'s implementation in the STL is a **map**, in `<map>`.
