@@ -17,3 +17,11 @@ To add an element to a vector, we use the `.push_back(item)` method. This is the
 In C++, functions use **call-by-value**, which means that when calling a function `f(v1, v2, v3)`, the arguments are evaluated first. This is because the functions parameters are initialized to copies of the arguments' values, and do not refer directly to the arguments themselves.
 
 For notes on multi-file compilation, see the ch4 folder.
+
+### chapter 5
+
+Containers in the STL have associated **iterators** that permit efficient extraction of elements without resorting to indices. As an example, given a vector `vector<double> vec`, we can get an iterator via `vector<double>::const_iterator iter = vec.begin()`. This gives a pointer to the vector structure, which we can get the value for via dereferencing, `*iter`.
+
+In fact, every STL container has two associated iterators: the `const_iterator` and `iterator`. The first gives us read-only access, while the second is more general and allows us to change values stored in the container.
+
+If our iterator is point to a *struct*, then instead of writing `(*iter).name`, we can use syntactic sugar to write `iter->name`.
