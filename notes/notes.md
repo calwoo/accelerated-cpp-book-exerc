@@ -41,3 +41,15 @@ We declare in the beginning `template <class T>` to determine the available type
 C++ allows you to define your own *types* via **classes**. One of the main benefits of classes is *encapsulation* and *abstraction*. C++ supports data hiding by allowing authors of types to say which members of those types are **public** and which are **private**.
 
 **Constructors** are special member functions that define how objects are initialized. They function similar to Python's `__init__` method in classes.
+
+### chapter 10
+
+**Pointers** are values that represent the memory address of an object. If `x` is an object, we can get the address using the operator `&x`. Given a pointer `p`, we can **dereference** it to get its underlying value using the operator `*p`. Given a type `T`, a pointer to an object of type `T` has type `T*`.
+
+**Arrays** are the statically-sized list in C++. They are effectively pointers. We can initialize an array of fixed size by the bracket notation, eg. `double coords[3]`. The array `coords` also gives us a pointer that points to the first element of the array, `*coords == coords[0]`.
+
+An important concept in C++ is memory management. One kind is *automatic* memory management, such as when instantiating local variables. A local variable occupies memory that the system allocates for it, but when the block that the variable sits in ends, that memory is deallocated, causing pointers to that part of memory to be rendered invalid. C++ does not warn programmers of this, so they can be tricky to debug. As an example, see `ch10/mem.cpp`.
+
+One way to get around this is to ask for memory to be **statically allocated**. By saying something is `static`, we are saying that we want to allocate it once, and only once, at some point before the first time that a function is called, and that we don't want to deallocate it as long as the function runs.
+
+However, this is also a bit tricky. Running a function returning a static variable will create a new pointer to the same object every time it's called! If we want to create new objects instead, we should use **dynamic allocation**. This uses the `new` and `delete` keywords. See `ch10/dynamic.cpp`.
