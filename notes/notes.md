@@ -56,3 +56,4 @@ However, this is also a bit tricky. Running a function returning a static variab
 
 ### chapter 11
 
+A painful/useful feature of C++ is that it gives almost complete control of the behavior of objects to the programmer. The author controls what happens when objects are created, copied, assigned, and destroyed. If we don't define these operations, the compiler will synthesize them for us, which might be disastrous.
