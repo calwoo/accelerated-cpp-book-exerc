@@ -53,3 +53,6 @@ An important concept in C++ is memory management. One kind is *automatic* memory
 One way to get around this is to ask for memory to be **statically allocated**. By saying something is `static`, we are saying that we want to allocate it once, and only once, at some point before the first time that a function is called, and that we don't want to deallocate it as long as the function runs.
 
 However, this is also a bit tricky. Running a function returning a static variable will create a new pointer to the same object every time it's called! If we want to create new objects instead, we should use **dynamic allocation**. This uses the `new` and `delete` keywords. See `ch10/dynamic.cpp`.
+
+### chapter 11
+
