@@ -29,3 +29,9 @@ If our iterator is point to a *struct*, then instead of writing `(*iter).name`, 
 ### chapter 7
 
 C++'s STL supports **associative containers**, which automatically arrange their elements into a sequence that depends on the values of the elements themselves, rather than the sequence in which we inserted them. The most common data structure of this sort is the **associative array**, and C++'s implementation in the STL is a **map**, in `<map>`.
+
+### chapter 8
+
+We start getting into the type system. C++ implements parametric polymorphism through **generic functions** and **templates**. Template functions need to have initialized **template parameters**.
+
+We declare in the beginning `template <class T>` to determine the available type variables. Then we can use this type variable as we wish, such as declaring `vector<T>`, which is a functorial type based off this type variable.
