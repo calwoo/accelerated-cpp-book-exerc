@@ -35,3 +35,9 @@ C++'s STL supports **associative containers**, which automatically arrange their
 We start getting into the type system. C++ implements parametric polymorphism through **generic functions** and **templates**. Template functions need to have initialized **template parameters**.
 
 We declare in the beginning `template <class T>` to determine the available type variables. Then we can use this type variable as we wish, such as declaring `vector<T>`, which is a functorial type based off this type variable.
+
+### chapter 9
+
+C++ allows you to define your own *types* via **classes**. One of the main benefits of classes is *encapsulation* and *abstraction*. C++ supports data hiding by allowing authors of types to say which members of those types are **public** and which are **private**.
+
+**Constructors** are special member functions that define how objects are initialized. They function similar to Python's `__init__` method in classes.
